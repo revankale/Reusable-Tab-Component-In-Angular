@@ -1,0 +1,25 @@
+<h1>reusable tab component</h1>
+<h2>using @input</h2>
+
+<div class="row">
+  <div class="col">
+    <app-tabs [tabArray]="tabs" (onTabChange)="tabChange($event)"></app-tabs>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <div *ngIf="activetedTabIndex == 0">
+      <p>this is register pannel</p>
+    </div>
+    <div *ngIf="activetedTabIndex == 1">
+      <p>this is Family pannel</p>
+    </div>
+    <div *ngIf="activetedTabIndex == 2">
+      <p>this is Contact pannel</p>
+    </div>
+    <div *ngIf="activetedTabIndex == 3">
+      <p>this is Bank pannel</p>
+    </div>
+  </div>
+</div>
